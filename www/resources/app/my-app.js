@@ -1823,7 +1823,8 @@ function login(){
                 initSearchbar();  
                 
                 webSockConnect();
-                getNewNotifications();
+                setTimeout(getNewNotifications, 1000);
+                
                 App.closeModal();
 
                 //console.log(localStorage['COM.QUIKTRAK.LIVE.GEOLOCKLIST']);
