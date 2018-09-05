@@ -134,9 +134,9 @@ function setupPush(){
                 App.showProgressbar(container); 
                
                 loginTimer = setInterval(function() {
-                    alert(localStorage.notificationChecked);
+                    /*alert(localStorage.notificationChecked);*/
                     if (localStorage.notificationChecked) {
-                        alert('here');
+                        /*alert('here');*/
                         clearInterval(loginTimer);
                         setTimeout(function(){
                             //alert('before processClickOnPushNotification');
@@ -2442,7 +2442,7 @@ function getNewNotifications(params){
                     plus.push.clear();
                 }
                 
-                alert('getNewNotifications called ' + localStorage.notificationChecked);
+                /*alert('getNewNotifications called ' + localStorage.notificationChecked);*/
                 console.log(result);                       
                 if (result.MajorCode == '000') {
                     var data = result.Data;  
