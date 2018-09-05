@@ -1823,7 +1823,9 @@ function login(){
                 initSearchbar();  
                 
                 webSockConnect();
-                setTimeout(getNewNotifications, 1000);
+                setTimeout(function(){
+                    getNewNotifications();
+                }, 1000);
                 
                 App.closeModal();
 
@@ -2417,7 +2419,7 @@ function loadPageSupport(){
 
 function getNewNotifications(params){ 
 
-        
+        alert('getNewNotifications called');
     var userInfo = getUserinfo();    
     var MinorToken = !userInfo ? '': userInfo.MinorToken;
     var deviceToken = !localStorage.PUSH_DEVICE_TOKEN? '' : localStorage.PUSH_DEVICE_TOKEN;
