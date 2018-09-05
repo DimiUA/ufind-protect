@@ -63,7 +63,9 @@ body.with-panel-left-reveal .panel-overlay{
 .navbar.theme-dealer, .searchbar.theme-dealer, .subnavbar.theme-dealer, .theme-dealer .navbar, .theme-dealer .searchbar, .theme-dealer .subnavbar, .theme-dealer .toolbar, .toolbar.theme-dealer{
 	background-color: #333;
 }
-
+.bg-dark-grey{
+	background-color: #333;
+}
 .title-color{
 	color: #08A5D8;
 }
@@ -687,7 +689,7 @@ a.tab-link.active:after {
 		    right: auto;
 		    height: 1px;
 		    width: 100%;
-		    background-color: #33474F;
+		    background-color: #ccc;
 		    display: block;
 		    z-index: 15;
 		    -webkit-transform-origin: 50% 0;

@@ -53,9 +53,6 @@ if( navigator.userAgent.match(/Windows/i) ){
     inBrowser = 1;
 }
 
-if( navigator.userAgent.match(/Windows/i) ){    
-    inBrowser = 1;
-}
 //alert(navigator.userAgent);
  
 document.addEventListener("deviceready", onDeviceReady, false ); 
@@ -138,7 +135,7 @@ function setupPush(){
                
                 loginTimer = setInterval(function() {
                     //alert(notificationChecked);
-                    if (notificationChecked) {
+                    if (notificationChecked == 1) {
                         clearInterval(loginTimer);
                         setTimeout(function(){
                             //alert('before processClickOnPushNotification');
@@ -548,29 +545,26 @@ $$('body').on('click', '.backToIndex', function(){
     returnToIndex();
 });
 
-/*$$('body').on('click', '.navbar_title_index', function(){
-    console.log('click');
-    var message = {};
-    var all_msg = [];
-    var msg = {
-        "Imei":"0354188046337940",
-        "AssetName": "Test",
-        "Acc":"OFF",
-        "Relay":"OFF",
-        "Battery":"4477(mV)",
-        "Charger":"0(mV)",
-        "Power":"1",
-        "GPS":"V,0",
-        "GSM":"2,-107(dB)",
-        "GPRS":"Offline",
-        "alarm":"status",
-        "Imsi":"43688875220070"
+$$('body').on('click', '.navbar_title ', function(){
+    //var payload = {};
+    //console.log('')
+    var payload = {
+        "type":"sms_received",
+        "alarm":"location",
+        "imsi":"43688875284305",
+        "AssetName":"Jack Da Roo",
+        "imei":"0352544071889449",
+        "messageReference":"c8e721a6-c549-4aa3-a940-0082bed7e0c5",
+        "state":"received",
+        "Lat":-32.03289,
+        "Lng":115.86833,
+        "positionTime":"2017-02-07T12:17:25",
+        "speed":"0.19",
+        "direct":"0.00"
     };
-    msg = JSON.stringify(msg);
-    message.payload = msg; 
-    all_msg.push(message);
-    setNotificationList(all_msg);
-});*/
+    //plus.push.createMessage("Welcome", payload, {cover:false} );
+    showMsgNotification([payload]);
+});
 
 $$(document).on('change', '.leaflet-control-layers-selector[type="radio"]', function(){ 
     if (window.TargetAsset.IMEI) {         
