@@ -135,7 +135,7 @@ function setupPush(){
                
                 loginTimer = setInterval(function() {
                     alert(localStorage.notificationChecked);
-                    if (localStorage.notificationChecked == 1) {
+                    if (localStorage.notificationChecked) {
                         alert('here');
                         clearInterval(loginTimer);
                         setTimeout(function(){
@@ -2419,7 +2419,7 @@ function loadPageSupport(){
 
 function getNewNotifications(params){ 
 
-        alert('getNewNotifications called');
+        
     var userInfo = getUserinfo();    
     var MinorToken = !userInfo ? '': userInfo.MinorToken;
     var deviceToken = !localStorage.PUSH_DEVICE_TOKEN? '' : localStorage.PUSH_DEVICE_TOKEN;
@@ -2442,6 +2442,7 @@ function getNewNotifications(params){
                     plus.push.clear();
                 }
                 
+                alert('getNewNotifications called ' + localStorage.notificationChecked);
                 console.log(result);                       
                 if (result.MajorCode == '000') {
                     var data = result.Data;  
