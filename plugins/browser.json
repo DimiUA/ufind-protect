@@ -25,6 +25,15 @@
         },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.sinopacific.ufindprotect"
+        },
+        "cordova-plugin-buildinfo": {
+            "PACKAGE_NAME": "com.sinopacific.ufindprotect"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.sinopacific.ufindprotect"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.sinopacific.ufindprotect"
         }
     },
     "dependent_plugins": {}
