@@ -41,7 +41,7 @@ function getPlusInfo(){
 }
 
 var inBrowser = 0;
-var notificationChecked = 0;
+localStorage.notificationChecked = 0;
 var loginTimer = 0;
 
 
@@ -134,8 +134,8 @@ function setupPush(){
                 App.showProgressbar(container); 
                
                 loginTimer = setInterval(function() {
-                    alert(notificationChecked);
-                    if (notificationChecked == 1) {
+                    alert(localStorage.notificationChecked);
+                    if (localStorage.notificationChecked == 1) {
                         alert('here');
                         clearInterval(loginTimer);
                         setTimeout(function(){
@@ -2426,12 +2426,12 @@ function getNewNotifications(params){
         if (container.children('.progressbar, .progressbar-infinite').length) return; //don't run all this if there is a current progressbar loading
         App.showProgressbar(container);    
 
-        notificationChecked = 0;
+        localStorage.notificationChecked = 0;
         var url = API_URL.URL_GET_NEW_NOTIFICATIONS.format(MinorToken,encodeURIComponent(deviceToken));         
         
         JSON1.request(url, function(result){
                 App.hideProgressbar();            
-                notificationChecked = 1;
+                localStorage.notificationChecked = 1;
                 if (params && params.ptr === true) {
                     App.pullToRefreshDone();
                 }
@@ -2478,7 +2478,7 @@ function getNewNotifications(params){
             },
             function(){
                 App.hideProgressbar();
-                notificationChecked = 1;            
+                localStorage.notificationChecked = 1;            
             }
         ); 
     }
