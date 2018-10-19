@@ -716,7 +716,7 @@ body.with-panel-left-cover .panel-overlay{
 		.position_bottom p{
 			margin: 0;
 			font-size: 16px;
-			color: #fff;
+			/* color: #fff; */
 		}
 		.position_bottom p.position_data{
 			font-size: 12px;
@@ -758,7 +758,7 @@ body.with-panel-left-cover .panel-overlay{
 		    right: auto;
 		    height: 1px;
 		    width: 100%;
-		    background-color: #33474F;
+		    background-color: #c8c7cc;
 		    display: block;
 		    z-index: 15;
 		    -webkit-transform-origin: 50% 0;

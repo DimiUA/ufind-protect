@@ -449,13 +449,13 @@ $$('body').on('click', '.routeButton', function(){
         "imei":"0352544071889449",
         "messageReference":"c8e721a6-c549-4aa3-a940-0082bed7e0c5",
         "state":"received",
-        "lat":-32.03289,
-        "lng":115.86833,
+        "Lat":-32.03289,
+        "Lng":115.86833,
         "positionTime":"2017-02-07T12:17:25",
         "speed":"0.19",
         "direct":"0.00"
     };
-    plus.push.createMessage("Welcome", payload, {cover:false} );
+    showMsgNotification([payload]);
 });*/
 
 $$('body').on('click', '#menu li', function () {
