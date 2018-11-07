@@ -31,7 +31,17 @@
 		            	</div>	            	
 		            </li>
 
-		           
+		           	<li >
+                        <label class="label-checkbox item-content  " >
+                            <input type="checkbox" name="checkbox-input" value="131072" {{#if Input}}checked="checked"{{/if}}>
+                            <div class="item-media">
+                                <i class="icon icon-form-checkbox"></i>                             
+                            </div>
+                            <div class="item-inner">
+                              <div class="item-title">{{@global.LANGUAGE.ALARM_MSG09}}</div>
+                            </div>                          
+                        </label>
+                    </li>
 		            <li >
 		            	<label class="label-checkbox item-content  " >
 		            		<input type="checkbox" name="checkbox-geolock" value="1024" {{#if Geolock}}checked="checked"{{/if}}>
@@ -55,6 +65,28 @@
 		            	</label>
 		            </li>
 		            <li >
+                        <label class="label-checkbox item-content  " >
+                            <input type="checkbox" name="checkbox-accOff" value="65536" {{#if AccOff}}checked="checked"{{/if}}>
+                            <div class="item-media">
+                                <i class="icon icon-form-checkbox"></i>                             
+                            </div>
+                            <div class="item-inner">
+                              <div class="item-title">{{@global.LANGUAGE.ALARM_MSG10}}</div>
+                            </div>                          
+                        </label>
+                    </li>
+                    <li >
+                        <label class="label-checkbox item-content  " >
+                            <input type="checkbox" name="checkbox-accOn" value="32768" {{#if AccOn}}checked="checked"{{/if}}>
+                            <div class="item-media">
+                                <i class="icon icon-form-checkbox"></i>                             
+                            </div>
+                            <div class="item-inner">
+                              <div class="item-title">{{@global.LANGUAGE.ALARM_MSG04}}</div>
+                            </div>                          
+                        </label>
+                    </li>
+		            <li >
 		            	<label class="label-checkbox item-content  " >
 		            		<input type="checkbox" name="checkbox-impact" value="16384" {{#if Impact}}checked="checked"{{/if}}>
 		            		<div class="item-media">
@@ -64,7 +96,7 @@
 					          <div class="item-title">{{@global.LANGUAGE.ALARM_MSG07}}</div>
 					        </div>		            		
 		            	</label>
-		            </li>
+		            </li>		            
 		            <li >
 		            	<label class="label-checkbox item-content  " >
 		            		<input type="checkbox"  name="checkbox-power" value="4" {{#if Power}}checked="checked"{{/if}}>
