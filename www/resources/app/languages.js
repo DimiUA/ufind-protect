@@ -146,6 +146,8 @@ window.LanguagePackages= {
 		"ALARM_MSG08": "Power Disconnection",
 		"ALARM_MSG09": "Alarm Input",
 		"ALARM_MSG10": "Ignition Off",
+		
+		"ALARM_MSG17": "Low Battery",
 
 		"ADD_EDIT_MSG00": "Information",
 		"ADD_EDIT_MSG01": "Asset Name",		
